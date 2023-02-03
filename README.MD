@@ -69,3 +69,21 @@ if(thirdNumber > max)
 
 Console.WriteLine("max = " + max);
 
+**Здесь на задача на поиск четного числа**
+
+Console.Clear();
+Console.WriteLine("Hello, World!");
+
+Console.Write("Введи число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+
+int remDiv = number % 2;
+
+if(remDiv == 0)
+{
+    Console.WriteLine("Четное");
+}
+else
+{
+    Console.WriteLine("Нечетное");
+}
