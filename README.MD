@@ -87,3 +87,22 @@ else
 {
     Console.WriteLine("Нечетное");
 }
+
+**Здесь задача на поиск только четных чисел от 1 до N**
+
+Console.Clear();
+Console.WriteLine("Hello, World!");
+
+Console.Write("Введи число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+
+int evenNumber = 2;
+
+if(number > 1)
+{
+    while(evenNumber <= number)
+    {
+        Console.Write(evenNumber + " ");
+        evenNumber = evenNumber + 2;
+    }
+}
