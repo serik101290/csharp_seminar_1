@@ -2,11 +2,14 @@
 
 Напишу просто код в данный файл.
 
-Задание на хождение максимального и минимального числа.
+**Задание на хождение максимального и минимального числа**
 
 Console.Clear();
+
 Console.WriteLine("Введите два разных целых числа!");
+
 		if(int.TryParse(Console.ReadLine(), out var firstNumber))
+
 		{
 			Console.WriteLine("Ok!");
 		}
@@ -35,4 +38,34 @@ Console.WriteLine("Введите два разных целых числа!");
 		{
 			Console.WriteLine("Ты ввел неправильные значения, попробуй еще разок!");
         }
+
+**Задание на поиск max out of 3 numbers**
+
+Console.Clear();
+
+int max = 0;
+
+Console.Write("Введи 1-е число: ");
+int firstNumber = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Введи 2-е число: ");
+int secondNumber = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Введи 3-е число: ");
+int thirdNumber = Convert.ToInt32(Console.ReadLine());
+
+if(firstNumber > max)
+{
+    max = firstNumber;
+}
+if(secondNumber > max)
+{
+    max = secondNumber;
+}
+if(thirdNumber > max)
+{
+    max = thirdNumber;
+}
+
+Console.WriteLine("max = " + max);
 
