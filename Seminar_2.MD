@@ -26,4 +26,27 @@ else {
 }
 
 
+**Задача 15 к семинару 2**
+
+
+Console.Clear();
+Console.WriteLine("Zdorovo! zadacha 15 Seminar 2");
+
+Console.Write("Введи цифру, означающую день недели: ");
+int cifradnya = Convert.ToInt32(Console.ReadLine());
+
+void CheckingTheDayOfTheWeek (int cifradnya) 
+{
+  if (cifradnya == 6 || cifradnya == 7) 
+  {
+  Console.WriteLine("(это выходной день) -> да");
+  }
+  else if (cifradnya < 1 || cifradnya > 7) 
+  {
+    Console.WriteLine("это не день недели");
+  }
+  else Console.WriteLine("(это не выходной день) -> нет");
+}
+
+CheckingTheDayOfTheWeek(cifradnya);
 
