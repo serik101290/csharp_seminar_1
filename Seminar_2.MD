@@ -45,36 +45,22 @@ else
 
 
 **Задача 15 к семинару 2**
-
+Здесь я проверил код, но он пятницу здесь выходным выдает.
 
 Console.Clear();
-Console.WriteLine("Zdorovo! zadacha 15 Seminar 2");
-
-Console.Write("Введи цифру, означающую день недели: ");
-
-int cifradnya = Convert.ToInt32(Console.ReadLine());
-
-void CheckingTheDayOfTheWeek (int cifradnya) 
-
+Console.WriteLine("Введи номер дня недели (1-7):");
+int day = Convert.ToInt32(Console.ReadLine());
+while (day < 1 || day > 7)
 {
-
-  if (cifradnya == 6 || cifradnya == 7) 
-  {
-  Console.WriteLine("(это выходной день) -> да");
-
-  }
-
-  else if (cifradnya < 1 || cifradnya > 7) 
-
-  {
-    Console.WriteLine("это не день недели");
-
-  }
-
-  else Console.WriteLine("(это не выходной день) -> нет");
-  
+  Console.Write("It's now week day");
+  day = Convert.ToInt32(Console.ReadLine());
 }
-
-
-CheckingTheDayOfTheWeek(cifradnya);
+if (day>=5)
+{
+  Console.WriteLine("It's a weekend!");
+}
+else
+{
+ Console.WriteLine("It's a weekday.");
+}
 
