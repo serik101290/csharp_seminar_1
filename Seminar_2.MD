@@ -22,27 +22,26 @@ Console.WriteLine($"Результат: {n / 10 % 10}");
 
 
 **Задача 13 к семинару 2**
-
+Тут стало ясно, что пока число меньше 100 оно не 3-хзначное, а если больше 1000 нужно делить на 10 и находить остаток.
 Console.Clear();
-Console.WriteLine("Zdorovo za---bal! Zadacha 13/Seminar 2");
+Console.WriteLine("Zdorovo! Zadacha 13/Seminar 2");
 
-Console.Write("Введи число: ");
+Console.WriteLine("Введи число:");
+int number = Convert.ToInt32(Console.ReadLine());
 
-int luboechislo = Convert.ToInt32(Console.ReadLine());
-
-string luboechislovvode = Convert.ToString(luboechislo);
-
-if (luboechislovvode.Length > 2)
-
+if (number < 100)
 {
-  Console.WriteLine("третья цифра -> " + luboechislovvode[2]);
-
+  Console.WriteLine("3-й цифры нет: ");
+}
+else
+{
+  while (number > 1000)
+  {
+    number = number / 10;
+  Console.WriteLine($"Результат: {number} % 10 = {number % 10}");
+}
 }
 
-else {
-  Console.WriteLine("-> третьей цифры нет");
-
-}
 
 
 **Задача 15 к семинару 2**
