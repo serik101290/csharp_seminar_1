@@ -1,16 +1,18 @@
 **Задача 10 к семинару 2**
-
+Здравствуйте, здесь код почему ошибку выдает. И работает только на 1 раз. Когда щаново дотнетран делаешь, выводит текст только с ошибкой
 Console.Clear();
 
-Console.WriteLine("Задача 10/Семинар 2");
+Console.Write("Seminar_2/Zadanie_10 ");
 
-Console.Write("Введи трёхзначное число: ");
+Console.WriteLine("Введи число! ");
+int n = Convert.ToInt32(Console.ReadLine());
+while (n < 99 || n > 999)
+{
+    Console.Write("Ошибка! Введи 3-хзначное число ");
+    int n2 = Convert.ToInt32(Console.ReadLine());
+}
+Console.WriteLine($"Результат: {n / 10 % 10}");
 
-int xxx4islo = Convert.ToInt32(Console.ReadLine());
-
-string snumber = Convert.ToString(xxx4islo);
-
-Console.WriteLine("вторая цифра этого числа -> "+snumber[1]);
 
 
 **Задача 13 к семинару 2**
