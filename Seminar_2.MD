@@ -12,7 +12,13 @@ while (n < 99 || n > 999)
     int n2 = Convert.ToInt32(Console.ReadLine());
 }
 Console.WriteLine($"Результат: {n / 10 % 10}");
+И еще одно решение:
+ Console.WriteLine("Enter a three-digit number:");
+            int number = int.Parse(Console.ReadLine());
 
+            int secondDigit = (number / 10) % 10;
+
+            Console.WriteLine("The second digit of the number is: " + secondDigit);
 
 
 **Задача 13 к семинару 2**
