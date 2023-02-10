@@ -42,3 +42,16 @@ double distance = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2) + Math.P
 //Выводим результат
 Console.WriteLine(Math.Round(+distance, 2));
 
+**Задача 23 семинара 3**
+
+Console.Clear();
+
+Console.Write("Zadacha_21/Seminar_3/Вывод таблицы кубов число до N ");
+
+Console.WriteLine("Введи число ");
+int n = Convert.ToInt32(Console.ReadLine());
+
+for (int i = 1; i <= n; i++)
+{
+   Console.WriteLine($"{i} ^ 3 = {i * i * i}"); 
+}
