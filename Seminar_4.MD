@@ -16,3 +16,18 @@ for (int i = 0; i < B; i++)
 }
 Console.WriteLine("Result: " + result);
 
+
+**Задача 27 семинара 4**
+
+Console.Clear();
+
+Console.WriteLine("Enter a number:");
+int number = Convert.ToInt32(Console.ReadLine());
+int sum = 0;
+while (number > 0)
+{
+    sum += number % 10;
+    number /= 10;
+}
+Console.WriteLine("Sum of digits: " + sum);
+
