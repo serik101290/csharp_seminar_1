@@ -1,4 +1,4 @@
-**Задача 31 семинара 5**
+**Задача 34 семинара 5**
 
 Console.Clear();
 
@@ -45,3 +45,38 @@ for (int i = 1; i < arr.Length; i += 2)
 }
 Console.WriteLine("= " + sumnoteven);
 
+**Задача 38 семинара 5**
+
+Console.Clear();
+Random rnd = new Random();
+double[] arr = new double[5];
+
+Console.WriteLine("Массив случайных чисел:");
+for (int i = 0; i < arr.Length; i++)
+{
+    arr[i] = rnd.NextDouble() * 100;
+    Console.Write(Math.Round(arr[i], 1, MidpointRounding.AwayFromZero) + " ");//Я эту функцию нашел на сайте майкрософта,
+    Console.Write(" ");
+}
+double max = arr[0];
+double min = arr[0];
+for (int i = 1; i < arr.Length; i++)
+{
+    if (arr[i] > max)
+    {
+        max = arr[i];
+    }
+    if (arr[i] < min)
+    {
+        min = arr[i];
+        Console.WriteLine(" ");
+     }
+}
+double diff = max - min;
+Console.WriteLine(" ");
+
+Console.WriteLine("Максимальный элемент массива: " + Math.Round(max, 1, MidpointRounding.AwayFromZero));
+ Console.WriteLine(" ");
+Console.WriteLine("Минимальный элемент массива: " + Math.Round(min, 1, MidpointRounding.AwayFromZero));
+ Console.WriteLine(" ");
+Console.WriteLine("Разница между максимальным и минимальным элементами: " + Math.Round(diff, 1, MidpointRounding.AwayFromZero));
