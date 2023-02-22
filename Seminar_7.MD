@@ -52,3 +52,28 @@ else
         Console.WriteLine($"На данной позиции находится элемент {element}.");
     }
 
+**Задача 52 семинара 7**
+
+int[,] array = new int[,]
+{
+    { 1, 4, 7, 2 },
+    { 5, 9, 2, 3 },
+    { 8, 4, 2, 4 }
+};
+
+int rows = array.GetLength(0);
+int columns = array.GetLength(1);
+
+for (int j = 0; j < columns; j++)
+{
+    double sum = 0;
+
+    for (int i = 0; i < rows; i++)
+    {
+        sum += array[i, j];
+    }
+
+    double average = Math.Round(sum / rows, 2);
+
+    Console.WriteLine("Average of column {0}: {1}", j, average);
+}
