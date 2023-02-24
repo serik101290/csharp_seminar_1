@@ -163,3 +163,75 @@ for (int j = 0; j <= i; j++)
     Console.WriteLine();
 }
     Console.ReadLine();
+
+**Задача 62 семинара 8**
+
+Console.Clear();
+
+Console.WriteLine("Задача 62");
+
+int[,] array = new int[4, 4];
+
+int row = 0, col = 0, direction = 0;
+for (int i = 1; i <= 16; i++)
+{
+    array[row, col] = i;
+
+    if (direction == 0)
+    {
+        if (col == 3 || array[row, col + 1] != 0)
+        {
+            direction = 1;
+            row++;
+        }
+        else
+        {
+            col++;
+        }
+    }
+    else if (direction == 1)
+    {
+        if (row == 3 || array[row + 1, col] != 0)
+        {
+            direction = 2;
+            col--;
+        }
+        else
+        {
+            row++;
+        }
+    }
+    else if (direction == 2)
+    {
+        if (col == 0 || array[row, col - 1] != 0)
+        {
+            direction = 3;
+            row--;
+        }
+        else
+        {
+            col--;
+        }
+    }
+    else if (direction == 3)
+    {
+        if (row == 0 || array[row - 1, col] != 0)
+        {
+            direction = 0; 
+            col++;
+        }
+        else
+        {
+            row--;
+        }
+    }
+}
+
+for (int i = 0; i < 4; i++)
+{
+    for (int j = 0; j < 4; j++)
+    {
+        Console.Write("{0,2} ", array[i, j]);
+    }
+    Console.WriteLine();
+}
