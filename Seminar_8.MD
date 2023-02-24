@@ -65,3 +65,31 @@ for (int i = 0; i < array.GetLength(0); i++)
 
 Console.WriteLine($"Строка с наименьшей суммой элементов: {minRowIndex}");
 
+**Задача 58 семинара 8**
+
+Console.Clear();
+Console.WriteLine("Задача 58");
+
+int[,] A = { {2, 4}, {3, 2} };
+int[,] B = { {3, 4}, {3, 3} };
+
+int[,] C = new int[2, 2];
+
+for (int i = 0; i < 2; i++)
+{
+    for (int j = 0; j < 2; j++)
+        {
+            for (int k = 0; k < 2; k++)
+                {
+                    C[i, j] += A[i, k] * B[k, j];
+                }
+            }
+        }
+for (int i = 0; i < 2; i++)
+{
+    for (int j = 0; j < 2; j++)
+        {
+            Console.Write(C[i, j] + " ");
+        }
+            Console.WriteLine();
+}
