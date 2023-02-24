@@ -121,4 +121,45 @@ for (int i = 0; i < 2; i++)
             Console.WriteLine($"{array[i, j, k]} = [{i}, {j}, {k}]");
         }
     }
+}4
+
+**Задача 61 семинара 8**
+
+Console.Clear();
+
+Console.Write("Введите количество строк: ");
+int rows = int.Parse(Console.ReadLine());
+
+int[][] triangle = new int[rows][];
+
+for (int i = 0; i < rows; i++)
+{
+    triangle[i] = new int[i + 1];
+    for (int j = 0; j <= i; j++)
+    {
+        if (j == 0 || j == i)
+        {
+            triangle[i][j] = 1;
+        }
+        else
+        {
+            triangle[i][j] = triangle[i - 1][j - 1] + triangle[i - 1][j];
+        }
+    }
 }
+
+Console.WriteLine("Треугольник Паскаля:");
+for (int i = 0; i < rows; i++)
+{
+for (int k = 0; k < rows - i; k++)
+{
+    Console.Write(" ");
+}
+// Вывод значений в строке
+for (int j = 0; j <= i; j++)
+{
+    Console.Write("{0} ", triangle[i][j]);
+}
+    Console.WriteLine();
+}
+    Console.ReadLine();
