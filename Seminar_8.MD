@@ -93,3 +93,32 @@ for (int i = 0; i < 2; i++)
         }
             Console.WriteLine();
 }
+
+**Задача 60 семинара 8**
+
+Console.Clear();
+Console.WriteLine("Задача 60");
+
+int[,,] array = new int[2, 2, 2];
+int num = 10;
+
+for (int i = 0; i < 2; i++)
+{
+    for (int j = 0; j < 2; j++)
+    {
+        for (int k = 0; k < 2; k++)
+        {
+            array[i, j, k] = num++;
+        }
+    }
+}
+for (int i = 0; i < 2; i++)
+{
+    for (int j = 0; j < 2; j++)
+    {
+        for (int k = 0; k < 2; k++)
+        {
+            Console.WriteLine($"{array[i, j, k]} = [{i}, {j}, {k}]");
+        }
+    }
+}
